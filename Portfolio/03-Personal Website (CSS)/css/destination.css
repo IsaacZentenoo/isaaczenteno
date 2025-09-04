@@ -1,0 +1,332 @@
+body {
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    max-height: 100px;;
+}
+.title{
+  color:gold;
+  padding: 20px;
+  position:absolute;
+  margin: 40px auto; 
+  font-size: 60px;
+  transform: translate(0%,-190%);
+
+}
+#ciudad {
+    width: 100%;
+    height: auto;
+    opacity: 0.4;
+    display: block;
+}
+
+.Facts {
+    position: absolute;
+    width: 50em;
+    bottom: 15%;
+    left: 50%;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    transform: translate(-80%,-10%);
+    opacity: 0.8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.Madrid{
+    color:gold;
+}
+
+#flag {
+    width: 300px;
+    display: block;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+.flag {
+    border-radius: 12px;
+    padding: 20px;
+    width: 500px;
+    margin: 40px;
+    position: absolute;
+    transform: translate(85%,-110%);
+    opacity: .8;
+}
+
+.flag h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+.spain3 {
+    width: 100%;
+    height: auto;
+    opacity: 0.4;
+    display: block;
+}
+
+#champions2 {
+    width: 100%;
+    height: auto;
+    opacity: 0.4;
+    display:block;
+    transform:translate(0,-8%);
+    overflow-y: hidden;
+
+
+}
+
+#lineup {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    border-radius: 12px;
+    opacity: 0.9;
+    transform: translate(0%,290%)
+}
+
+.achievements {
+position: absolute; 
+width: 40em;
+height: 15em; 
+bottom: 15%; 
+left: 50%;
+background: white; 
+color: black; 
+padding: 20px 20px; 
+border-radius: 20px; 
+font-family: Arial, sans-serif; 
+transform: translate(-15%, 420%); 
+opacity: 0.7; 
+}
+.achievements h2 {
+    font-size: 60px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.achievements img {
+    display: block;
+    margin: 20px auto 0 auto;
+    max-width: 80%;
+    transform: translate(150%, -100%); 
+}
+.mazatlan h1{
+    color: rgb(255, 255, 255);
+    font-size: 100px;
+    margin: 0px;
+    position: relative;
+    z-index: 2;
+    top: 0;
+}
+.mazatlan img{
+    width: 1500px;
+    margin: 0px;
+    display:block;
+    opacity: 0.9;
+    height: 700px;
+}
+.mazatlaninfo{
+    position: absolute;
+    width: 50em;
+    bottom: 15%;
+    left: 50%;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    transform: translate(-80%,500%);
+    opacity: 0.8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.Mazatlan{
+    color:rgb(110, 170, 233);
+}
+.mexico img{
+    opacity: 0.5;
+    width: 1500px;
+    height: 600px;
+}
+.flag2{
+    border-radius: 12px;
+    padding: 20px;
+    width: 500px;
+    margin: 40px;
+    position: absolute;
+    transform: translate(85%,-130%);
+    opacity: .8;
+    
+}
+.flag2 img{
+    width:350px;
+    transform: translate(20%,0%);
+}
+.flag2 h2{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 20px;
+}
+.hamburg img{
+    width: 1500px;
+    height:700px;
+    opacity: 0.7;
+}
+.hamburginfo{
+    position: absolute;
+    width: 50em;
+    bottom: 15%;
+    left: 50%;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    transform: translate(-80%,870%);
+    opacity: 0.8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.hamburg{
+    color: rgba(44, 153, 44, 0.782);
+}
+.Germany img{
+    opacity: 0.5;
+    width: 1500px;
+    height: 600px;
+}
+.flag3{
+    border-radius: 12px;
+    padding: 20px;
+    width: 500px;
+    margin: 40px;
+    position: absolute;
+    transform: translate(85%,-130%);
+    opacity: .8;
+}
+.flag3 h2{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 20px;
+}
+.flag3 img{
+    width:350px;
+    transform: translate(17%,-0%);
+}
+.munchen img{
+    width: 1500px;
+    height:800px;
+    opacity: 0.6;
+}
+.muncheninfo{
+    position: absolute;
+    width: 50em;
+    bottom: 15%;
+    left: 50%;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    transform: translate(-80%,1250%);
+    opacity: 0.8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.munchen{
+    color: red;
+}
+.germany2 img{
+    width: 1500px;
+    height: 500px;
+}
+.flag4{
+    border-radius: 12px;
+    padding: 20px;
+    width: 500px;
+    margin: 40px;
+    position: absolute;
+    transform: translate(80%,-120%);
+    opacity: .8;
+}
+.flag4 h2{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 20px;
+}
+.flag4 img{
+    width:350px;
+    transform: translate(18%,-0%);
+}
+.paris img{
+    width:1500px;
+    height:700px;
+}
+.parisinfo{
+    position: absolute;
+    width: 50em;
+    bottom: 15%;
+    left: 50%;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    transform: translate(-80%,1650%);
+    opacity: 0.8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.paris{
+    color: rgb(43, 0, 255);
+}
+.France img{
+    width: 1500px;
+    height: 500px;
+    opacity: .4;
+}
+.flag5{
+    border-radius: 12px;
+    padding: 20px;
+    width: 500px;
+    margin: 40px;
+    position: absolute;
+    transform: translate(80%,-120%);
+    opacity: .8;
+}
+.flag5 h2{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 20px;
+}
+.flag5 img{
+width:350px;
+transform: translate(20%,0%);
+}
+.backtohomepage{
+    border-radius: 12px;
+    padding: 20px;
+    width: 500px;
+    margin: 40px;
+    position: absolute;
+    transform: translate(220%,-120%);
+    opacity: .8;
+}
+.backtohomepage h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 20px;
+}
+.backtohomepage img{
+width: 150px;
+height: 100px;
+}
