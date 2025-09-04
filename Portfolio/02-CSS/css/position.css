@@ -1,3 +1,56 @@
-body {
+body{
     margin: 0;
+    background-color: rgb(255, 229, 198);
+    position: relative;
+}
+
+.top{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    background-color: rgb(255, 0, 0);
+}
+
+.mid{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    background-color: blue;
+}
+
+.bot{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    background-color: yellow;
+}
+
+.top1{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    top: 540px;
+    left: 780px;
+}
+
+.mid1{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    background-color: blue;
+    position: absolute;
+    top: 300px;
+    left: 540px;
+}
+
+.bot1{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    background-color: yellow;
+    position: absolute;
+    top: 60px;
+    left: 300px;
 }
