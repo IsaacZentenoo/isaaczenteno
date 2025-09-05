@@ -1,0 +1,112 @@
+body {
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 600px;
+  height: 400px;
+  background: black;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.row {
+  display: flex;
+  gap: 5px;
+  flex: 1;
+}
+
+.box {
+  background: white;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+.big {
+  width: 200px;
+  height: 200px;
+}
+
+.red {
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+
+.yellow {
+  width: 100px;
+  height: 200px;
+  background: gold;
+}
+
+.blue {
+  width: 200px;
+  height: 100px;
+  background: blue;
+}
+
+.small1{
+  width: 50px;
+  height: 100px;
+  background: white;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+.small2{
+  width: 200px;
+  height: 100px;
+  background: white;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+.small3{
+  width: 150px;
+  height: 100px;
+  background: white;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+.small4{
+  width: 150px;
+  height: 90px;
+  background: white;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+.small5{
+  width: 100px;
+  height: 90px;
+  background: white;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+.small6{
+  width: 200px;
+  height: 90px;
+  background: white;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+.small7{
+  width: 150px;
+  height: 90px;
+  background: white;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+
+
