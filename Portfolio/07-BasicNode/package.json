@@ -1,0 +1,24 @@
+{
+  "name": "basic-node-exercise",
+  "version": "1.0.0",
+  "description": "exercise node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsaacZentenoo/isaaczenteno.git"
+  },
+  "author": "isaaczenteno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsaacZentenoo/isaaczenteno/issues"
+  },
+  "homepage": "https://github.com/IsaacZentenoo/isaaczenteno#readme",
+  "dependencies": {
+    "star-wars-quotes": "^1.0.2",
+    "superheroes": "^4.0.0",
+    "supervillains": "^4.0.0"
+  }
+}
