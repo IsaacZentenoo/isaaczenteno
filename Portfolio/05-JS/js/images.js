@@ -62,9 +62,11 @@ function component(width, height, color, x, y, type) {
     this.y += this.speedY;
     if (this.type == "image") {
       if (this.x >= canvasWidth - this.width / 2 || this.x <= 0) {
+        this.speedX = -this.speedX;
         //TODO: make the image bounce back when reaching the edges
       }
       if (this.y >= canvasHeight - this.height / 2 || this.y <= 0) {
+        this.speedY = -this.speedY;
         //TODO: make the image bounce back when reaching the edges
       }
     }
@@ -84,10 +86,12 @@ function moveup() {
 }
 
 function movedown() {
+  myGamePiece.speedY += 1;
   //TODO: implement the move down functionality
 }
 
 function moveleft() {
+  myGamePiece.speedX -= 1;
   //TODO: implement the move left functionality
 }
 
