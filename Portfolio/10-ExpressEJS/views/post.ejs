@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= post.title %></title>
+</head>
+<body>
+  <h1><%= post.title %></h1>
+
+  <p><%= post.content %></p>
+
+  <h2>Edit Post</h2>
+  <form action="/post/edit/<%= post.id %>" method="post">
+    <input type="text" name="title" value="<%= post.title %>" required>
+    <textarea name="content" rows="6" required><%= post.content %></textarea>
+    <button type="submit">Save Changes</button>
+  </form>
+
+  <form action="/post/delete/<%= post.id %>" method="post" style="margin-top:10px;">
+    <button type="submit">Delete Post</button>
+  </form>
+
+  <br>
+  <a href="/home">Go back to Home</a>
+</body>
+</html>

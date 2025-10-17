@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+ <%- include('header') %>
+<main style="padding: 20px; text-align:center;">
+<h3>Get Method</h3>
+<form action="/login" method="get">
+<label for="name-get">Name</label>
+<input type="text" name="name" id="name-get" />
+<input type="submit" value="Login" />
+</form>
+<h3>Post Method</h3>
+<form action="/login" method="post">
+<label for="name-post">Name</label>
+<input type="text" name="name" id="name-post" />
+<input type="submit" value="Login" />
+</form>
+</main>
+<%- include('footer') %>
+</body>
+</html>

@@ -25,7 +25,7 @@ This exercise will ilustrate how do we use EJS to create dynamic content using E
   - Try it with an unsecured and secured version (GET/POST)
 - The server should return with a simple message greeting the user by name and the security level in which the message arrived.
 
----
+
 
 ### Templates
 

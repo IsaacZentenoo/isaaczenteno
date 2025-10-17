@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wazzup</title>
+</head>
+<body>
+<h1>Success!!</h1>
+<h3 id="greeting">Wazzup</h3>
+<br />
+<a href="/">Go back</a>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const name = params.get('name');
+if (name) {
+    document.getElementById('greeting').textContent = `Wazzup ${name}`;
+}
+</script>
+</body>
+</html>

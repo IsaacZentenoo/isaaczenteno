@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Express Personal API</title>
+</head>
+<body>
+<h1>Welcome</h1>
+<form action="/greet" method="get">
+  <label for="name">Enter your name:</label>
+  <input type="text" id="name" name="name" required>
+  <button type="submit">Sumbit</button>
+</form>
+<h2>Registered Names</h2>
+<ul id="nameList"></ul>
+<hr>
+<h2>TODO List</h2>
+<form action="/task" method="POST">
+<input type="text" name="task" placeholder="New task" required>
+<button type="submit">Add</button>
+</form>
+<ul id="taskList"></ul>
+<script>
+async function loadTasks() {
+  const response = await fetch('/task');
+  const data = await response.json();
+  const ul = document.getElementById('taskList');
+  ul.innerHTML = '';
+  data.tasks.forEach((task, i) => {
+    const li = document.createElement('li');
+    li.innerHTML = `
+      ${task} 
+      <a href="/task/delete/${i}">Delete</a>
+      <a href="#" onclick="moveUp(${i})">↑</a>
+      <a href="#" onclick="moveDown(${i})">↓</a>
+    `;
+    ul.appendChild(li);
+  });}
+async function loadNames() {
+  const response = await fetch('/names');
+  const data = await response.json();
+  const ul = document.getElementById('nameList');
+  ul.innerHTML = '';
+  data.names.forEach((name) => {
+    const li = document.createElement('li');
+    li.textContent = name;
+    ul.appendChild(li);
+});}
+loadTasks();
+loadNames();
+</script>
+</body>
+</html>

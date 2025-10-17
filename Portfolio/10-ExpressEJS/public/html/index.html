@@ -6,15 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 
 <body>
     <img src="../images/StarLion.png" alt="lion brewery" />
     <h1>Welcome to my landing page</h1>
-    <form>
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" />
-        <input type="submit" />
+    <form action="/login" method="get">
+        <h3>Unsecured Login</h3>
+        <label for="name-get">Name</label>
+        <input type="text" name="name" id="name-get" />
+        <input type="submit" value="Login GET" />
+    </form>
+    <form action="/login" method="post">
+        <h3>Secured Login</h3>
+        <label for="name-post">Name</label>
+        <input type="text" name="name" id="name-post" />
+        <input type="submit" value="Login POST" />
     </form>
 </body>
 
