@@ -1,0 +1,67 @@
+<h2>Driver List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Last Name</th>
+      <th>DOB</th>
+      <th>URL</th>
+      <th>Nationality</th>
+      <th>Team</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% drivers.forEach(function(driver) { %>
+      <tr>
+        <% if (editId && editId == driver._id) { %>
+          <form action="/driver/edit/<%= driver._id %>" method="post">
+            <td><input type="text" name="num" value="<%= driver.num %>" /></td>
+            <td><input type="text" name="code" value="<%= driver.code %>" /></td>
+            <td><input type="text" name="name" value="<%= driver.name %>" /></td>
+            <td><input type="text" name="lname" value="<%= driver.lname %>" /></td>
+            <td><input type="date" name="dob" value="<%= driver.dob ? driver.dob.toISOString().slice(0,10) : '' %>" /></td>
+            <td><input type="url" name="url" value="<%= driver.url %>" /></td>
+            <td>
+              <select name="nation">
+                <% nations.forEach(function(n) { %>
+                  <option value="<%= n.value %>" <%= driver.nation === n.value ? 'selected' : '' %>><%= n.label %></option>
+                <% }) %>
+              </select>
+            </td>
+            <td>
+              <select name="team">
+                <% teams.forEach(function(t) { %>
+                  <option value="<%= t.value %>" <%= driver.team === t.value ? 'selected' : '' %>><%= t.label %></option>
+                <% }) %>
+              </select>
+            </td>
+            <td>
+              <button type="submit">Save</button>
+              <a href="/">Cancel</a>
+            </td>
+          </form>
+        <% } else { %>
+          <td><%= driver.num %></td>
+          <td><%= driver.code %></td>
+          <td><%= driver.name %></td>
+          <td><%= driver.lname %></td>
+          <td><%= driver.dob ? driver.dob.toISOString().slice(0,10) : '' %></td>
+          <td><a href="<%= driver.url %>" target="_blank">Bio</a></td>
+          <td><%= driver.nation %></td>
+          <td><%= driver.team %></td>
+          <td>
+            <form action="/driver/edit/<%= driver._id %>" method="get" style="display:inline;">
+              <button type="submit">Edit</button>
+            </form>
+            <form action="/driver/delete/<%= driver._id %>" method="post" style="display:inline;">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
+        <% } %>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
