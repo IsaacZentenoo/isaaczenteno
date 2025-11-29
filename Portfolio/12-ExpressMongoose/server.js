@@ -11,7 +11,6 @@ app.set("view engine", "ejs");
 const mongoUrl = "mongodb://127.0.0.1:27017/f1";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 
-// Definition of a schema
 const teamSchema = new mongoose.Schema({
   id: Number,
   name: String,
@@ -70,14 +69,13 @@ const parseCsv = (csv) => {
   });
 };
 
-// Middleware: load CSV to DB if empty
 async function loadCsvIfNeeded(req, res, next) {
   const count = await Driver.countDocuments();
   if (count === 0) {
     const csv = fs.readFileSync(csvPath, 'utf8');
     const rows = parseCsv(csv);
     for (const row of rows) {
-      // Find or create team
+     
       let team = null;
       if (row.current_team && row.current_team !== 'N/A') {
         team = await Team.findOneAndUpdate(
@@ -101,21 +99,21 @@ async function loadCsvIfNeeded(req, res, next) {
   next();
 }
 
-// Helper: get nations and teams for selects
+
 async function getFormData() {
   const teams = (await Team.find()).map(t => ({ value: t.name, label: t.name }));
   const nations = [...new Set((await Driver.find()).map(d => d.nationality))].map(n => ({ value: n, label: n }));
   return { teams, nations };
 }
 
-// Home route: show form and list
+
 app.get("/", loadCsvIfNeeded, async (req, res) => {
   const drivers = await Driver.find();
   const { teams, nations } = await getFormData();
   res.render("index", { drivers, teams, nations, driver: null, editId: null });
 });
 
-// Add driver
+
 app.get("/driver", async (req, res) => {
   const { num, code, name, lname, dob, url, nation, team } = req.query;
   let teamObj = team ? await Team.findOne({ name: team }) : null;
@@ -126,7 +124,7 @@ app.get("/driver", async (req, res) => {
   res.redirect("/");
 });
 
-// Edit driver (show form)
+
 app.get("/driver/edit/:id", loadCsvIfNeeded, async (req, res) => {
   const drivers = await Driver.find();
   const driver = await Driver.findById(req.params.id);
@@ -134,7 +132,7 @@ app.get("/driver/edit/:id", loadCsvIfNeeded, async (req, res) => {
   res.render("index", { drivers, teams, nations, driver, editId: req.params.id });
 });
 
-// Edit driver (save)
+
 app.post("/driver/edit/:id", async (req, res) => {
   const { num, code, name, lname, dob, url, nation, team } = req.body;
   let teamObj = team ? await Team.findOne({ name: team }) : null;
@@ -145,13 +143,13 @@ app.post("/driver/edit/:id", async (req, res) => {
   res.redirect("/");
 });
 
-// Delete driver
+
 app.post("/driver/delete/:id", async (req, res) => {
   await Driver.findByIdAndDelete(req.params.id);
   res.redirect("/");
 });
 
-// Toggle: list by drivers or teams
+
 app.get("/toggle", loadCsvIfNeeded, async (req, res) => {
   const { view } = req.query;
   if (view === 'teams') {
