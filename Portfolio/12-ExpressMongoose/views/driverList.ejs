@@ -20,8 +20,8 @@
           <form action="/driver/edit/<%= driver._id %>" method="post">
             <td><input type="text" name="num" value="<%= driver.num %>" /></td>
             <td><input type="text" name="code" value="<%= driver.code %>" /></td>
-            <td><input type="text" name="name" value="<%= driver.name %>" /></td>
-            <td><input type="text" name="lname" value="<%= driver.lname %>" /></td>
+            <td><input type="text" name="name" value="<%= driver.forename %>" /></td>
+            <td><input type="text" name="lname" value="<%= driver.surname %>" /></td>
             <td><input type="date" name="dob" value="<%= driver.dob ? driver.dob.toISOString().slice(0,10) : '' %>" /></td>
             <td><input type="url" name="url" value="<%= driver.url %>" /></td>
             <td>
@@ -46,12 +46,12 @@
         <% } else { %>
           <td><%= driver.num %></td>
           <td><%= driver.code %></td>
-          <td><%= driver.name %></td>
-          <td><%= driver.lname %></td>
+          <td><%= driver.forename %></td>
+          <td><%= driver.surname %></td>
           <td><%= driver.dob ? driver.dob.toISOString().slice(0,10) : '' %></td>
           <td><a href="<%= driver.url %>" target="_blank">Bio</a></td>
-          <td><%= driver.nation %></td>
-          <td><%= driver.team %></td>
+          <td><%= driver.nationality %></td>
+          <td><%= driver.team && driver.team.name ? driver.team.name : '' %></td>
           <td>
             <form action="/driver/edit/<%= driver._id %>" method="get" style="display:inline;">
               <button type="submit">Edit</button>
