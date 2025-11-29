@@ -1,3 +1,17 @@
+body {
+  background-color: #2c3e50;
+  color: #f9e79f;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  color: #f9e79f;
+}
+
+.dice p {
+  font-family: 'Indie Flower', cursive;
+  color: #f9e79f;
+}
 .container {
   width: 70%;
   margin: auto;
