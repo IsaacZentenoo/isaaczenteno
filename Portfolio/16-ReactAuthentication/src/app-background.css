@@ -1,0 +1,21 @@
+body {
+  background: #111;
+  color: #ffffff;
+}
+
+.card, .bg-light, .container, .rounded, .shadow-sm {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+a, .btn {
+  background-color: #111;
+  color: #ffffff !important;
+  border-color: #fffdfb;
+}
+
+input, textarea {
+  background: #222;
+  color: #fffdfb;
+  border: 1px solid #444;
+}
