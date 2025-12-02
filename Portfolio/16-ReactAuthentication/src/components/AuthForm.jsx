@@ -10,7 +10,7 @@ function AuthForm({ onAuth, mode = 'login' }) {
     e.preventDefault();
     setError('');
     try {
-      // Use full backend URL for dev
+
       const url = mode === 'login'
         ? 'http://localhost:4000/api/login'
         : 'http://localhost:4000/api/signup';
