@@ -6,11 +6,11 @@ const Comment = require('./models/Comment');
 const app = express();
 const jwt = require('jsonwebtoken');
 const User = require('./models/User');
-const JWT_SECRET = 'starwars_secret_key'; // Cambia esto en producción
+const JWT_SECRET = 'starwars_secret_key'; 
 
 app.use(cors());
 app.use(express.json());
-// Servir archivos estáticos desde /public
+
 const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -39,7 +39,7 @@ app.post('/api/login', async (req, res) => {
   res.json({ token, username: user.username });
 });
 
-// Middleware para proteger rutas
+
 function authMiddleware(req, res, next) {
   const authHeader = req.headers.authorization;
   if (!authHeader) return res.status(401).json({ error: 'No token provided.' });

@@ -1,4 +1,10 @@
-<%- include("header") -%>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <%- include("header") -%>
 
   <div class="box" id="heading">
     <h1> <%= listTitle %> </h1>
@@ -7,15 +13,35 @@
   <div class="box">
     <% for (let i=0; i<newListItems.length; i++) { %>
       <div class="item">
-        <input type="checkbox">
-        <p><%=  newListItems[i]  %></p>
+        <input type="checkbox" onclick="strikeTask(this)">
+        <span class="task"><%= newListItems[i].name %></span>
+        <form action="/delete" method="POST" style="display:inline;">
+          <input type="hidden" name="checkbox" value="<%= newListItems[i]._id %>">
+          <button type="submit" class="delete-btn">🗑️</button>
+        </form>
       </div>
-      <% } %>
+    <% } %>
 
-      <form class="item" action="/" method="post">
-        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-        <button type="submit" name="list">+</button>
-      </form>
+    <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off" required>
+      <input type="hidden" name="list" value="<%= listTitle %>">
+      <button type="submit">+</button>
+    </form>
+
+    <script>
+      function strikeTask(checkbox) {
+        const span = checkbox.nextElementSibling;
+        if (checkbox.checked) {
+          span.style.color = '#aaa';
+          span.style.textDecoration = 'line-through';
+        } else {
+          span.style.color = '';
+          span.style.textDecoration = '';
+        }
+      }
+    </script>
   </div>
 
-<%- include("footer") -%>
+  <%- include("footer") -%>
+</body>
+</html>
