@@ -50,7 +50,7 @@ function MoviePage() {
           </Button>
         </div>
       </div>
-      {/* Best Character Section */}
+      {}
       {movie.best_character && (
         <div className="mb-4 p-3 bg-light rounded shadow-sm">
           <h4 className="mb-3">Best Character</h4>

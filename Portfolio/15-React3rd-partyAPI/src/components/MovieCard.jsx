@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 function MovieCard({ movie }) {
   const navigate = useNavigate();
 
-  // Selección de avatar según afiliación
+
   const affiliation = movie.best_character?.affiliation?.toLowerCase();
   let avatar = '/images/default-character.png';
   if (affiliation === 'jedi') avatar = '/images/jedi.png';

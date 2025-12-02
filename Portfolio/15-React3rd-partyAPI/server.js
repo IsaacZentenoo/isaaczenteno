@@ -7,7 +7,6 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-// Servir archivos estáticos desde /public
 const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
